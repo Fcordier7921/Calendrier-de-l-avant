@@ -1,8 +1,9 @@
 
-var i;
-for (i = 0; i < 24; i++) {
-  var circle = document.createElement('div');
-  circle.className = "circle";
-  circle.id = 'circle'+i;
+let i;
+for (i = 1; i < 24; i++) {
+  let circle = document.createElement('div');
+  circle.className = "jour";
+  circle.id = 'jour'+i;
+  
   document.getElementById("app").appendChild(circle);
 }
