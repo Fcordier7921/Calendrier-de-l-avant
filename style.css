@@ -1,3 +1,22 @@
+@font-face {
+    font-family: 'mountains_of_christmasregular';
+    src: url('MountainsofChristmas-webfont.eot');
+    src: url('MountainsofChristmas-webfont.eot?#iefix') format('embedded-opentype'),
+         url('MountainsofChristmas-webfont.woff2') format('woff2'),
+         url('MountainsofChristmas-webfont.woff') format('woff'),
+         url('MountainsofChristmas-webfont.ttf') format('truetype'),
+         url('MountainsofChristmas-webfont.svg#mountains_of_christmasregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+h1{
+    font-family: 'mountains_of_christmasregular', 'Courier New', Courier, monospace;
+    font-size: 2rem;
+}
+p{
+    font-family: 'mountains_of_christmasregular', 'Courier New', Courier, monospace;
+}
 .jour{
     z-index: 999;
     height: 257px;
