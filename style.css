@@ -16,6 +16,7 @@ h1{
 }
 p{
     font-family: 'mountains_of_christmasregular', 'Courier New', Courier, monospace;
+    font-size: 1rem;
 }
 .jour{
     z-index: 999;
