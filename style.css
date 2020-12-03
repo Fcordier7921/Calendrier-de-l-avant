@@ -10,13 +10,17 @@
     font-style: normal;
 
 }
-h1{
-    font-family: 'mountains_of_christmasregular', 'Courier New', Courier, monospace;
-    font-size: 2rem;
-}
+
 p{
     font-family: 'mountains_of_christmasregular', 'Courier New', Courier, monospace;
-    font-size: 1rem;
+    font-size: 3rem;
+}
+.jumbotron{
+    background-image: url(img/font5.jpg);
+}
+.font{
+    border-top: black solid 10px;
+    background-image: url(img/font4.jpg);
 }
 .jour{
     z-index: 999;

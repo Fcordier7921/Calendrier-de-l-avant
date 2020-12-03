@@ -15,12 +15,33 @@
 
 <body>
 <div class="jumbotron text-center" style="margin-bottom:0; ">
-    <h1>Calendrier de l'avent 2019</h1>
-    <p>Hoo Hoo Hoooooo ! Voici quelques indices pour ton calendrier de l'avent :p</p>
+    <h1 style="font-family: 'mountains_of_christmasregular', 'Courier New', Courier, monospace; font-size: 7rem;
+    ">Calendrier de l'avent 2019</h1>
+    <p>Hoo Hoo Hoooooo ! Voici ton calendrier de l'avent </p>
 </div>
 
-<div class="container-fluid" style="margin-top:30px" >
+<div class="container-fluid font p-2" style="margin-top:0" >
     <div class="row" id="calendrier"></div>
+    <div class="modal" id="m">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                
+                <div class="modal-header">
+                    <h4 class="modal-title">Indice du jour <span id="day"></span</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <div class="modal-body">
+                    <div v-html="modal"></div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Fermer</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
 </div>
 <script src="advent.js" ></script>
 </body>
