@@ -20,7 +20,7 @@
 
 var box = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]
 var i = box.length //nobre de case dans mon tableau
-let day;
+let DayCompte = [];
 while (i != 1) {
     i--;
     let randomNumber = Math.floor(Math.random() * i); //
@@ -29,16 +29,26 @@ while (i != 1) {
     day = box[randomNumber];
     box.splice(randomNumber, 1);
     circle.className = "circle";
-    circle.innerHTML = '<a href="" data-toggle="modal" data-target="#m" @click="setModal(message)"><img src="img/' + day + '.png"></a>';
+    circle.innerHTML = '<a href="" data-toggle="modal" data-target="#m" onclick="myFunction()"><img src="img/' + day + '.png"></a>';
     document.getElementById("calendrier").appendChild(circle);
-    console.log(circle.id)
+    DayCompte.push(day);
+
 }
-let today = new Date();
-let calDate = new Date('2020-12-' + day);
-calDate.setDate(calDate.getDate());
-if (calDate >= today) {
-    this.modal = 'Hep Hep Hep, on ne triche pas !'
-} else {
-    this.modal = message.content;
+
+function myFunction() {
+    let i;
+    if( i=0, i<=DayCompte.length, i++){
+        let nuberOfDay = DayCompte[i];
+    document.getElementById("day").innerHTML = i;
+    let today = new Date();
+    let calDate = new Date('2020-12-' + nuberOfDay);
+    calDate.setDate(calDate.getDate());
+    if (calDate >= today) {
+        this.modal = 'Hep Hep Hep, on ne triche pas !'
+    } else {
+        this.modal = 'message.content';
+    }
+    
 }
-document.getElementById("day").innerHTML=calDate;
+    
+}
