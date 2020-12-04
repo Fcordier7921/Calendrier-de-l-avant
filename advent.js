@@ -20,6 +20,7 @@
 
 var box = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]
 var i = box.length //nobre de case dans mon tableau
+var modal =  document.getElementById('modal');
 let DayCompte = [];
 while (i != 1) {
     i--;
@@ -29,26 +30,36 @@ while (i != 1) {
     day = box[randomNumber];
     box.splice(randomNumber, 1);
     circle.className = "circle";
-    circle.innerHTML = '<a href="" data-toggle="modal" data-target="#m" onclick="myFunction()"><img src="img/' + day + '.png"></a>';
+    circle.innerHTML = '<a href="" data-toggle="modal" data-target="#m" onclick="myFunction('+day+')"><img src="img/' + day + '.png"></a>';
     document.getElementById("calendrier").appendChild(circle);
     DayCompte.push(day);
 
 }
 
-function myFunction() {
+function myFunction(day) {
     let i;
-    if( i=0, i<=DayCompte.length, i++){
-        let nuberOfDay = DayCompte[i];
-    document.getElementById("day").innerHTML = i;
-    let today = new Date();
-    let calDate = new Date('2020-12-' + nuberOfDay);
-    calDate.setDate(calDate.getDate());
-    if (calDate >= today) {
-        this.modal = 'Hep Hep Hep, on ne triche pas !'
-    } else {
-        this.modal = 'message.content';
-    }
+    let nuberOfDay=0;
+    for( i=0; i<=DayCompte.length; i++){
+         nuberOfDay = DayCompte[i];
+         //console.log(nuberOfDay)
     
+    let today = new Date();
+    newToday = today.toString();
+    const theDay = newToday.split(' ');
+    
+     console.log(newToday);
+    
+
+
+   
+    if ((day-1 )>= theDay[2]) {
+        document.getElementById('day').innerHTML= 'Hep Hep Hep, on ne triche pas !';
+    } else {
+        document.getElementById('day').innerHTML= 'Nous somme le '+day;
+        document.getElementById('me').innerHTML= '<img src="img/'+day+'.gif">';
+        
+    }
+   // console.log(DayCompte);
 }
     
 }
