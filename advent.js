@@ -24,7 +24,7 @@ var modal =  document.getElementById('modal');
 let DayCompte = [];
 while (i != 1) {
     i--;
-    let randomNumber = Math.floor(Math.random() * i); //
+    let randomNumber = Math.floor(Math.random() * i); 
     var circle = document.createElement('div');
     circle.id = 'circle' + box[randomNumber];
     day = box[randomNumber];
@@ -57,9 +57,15 @@ function myFunction(day) {
     } else {
         document.getElementById('day').innerHTML= 'Nous somme le '+day;
         document.getElementById('me').innerHTML= '<img src="img/'+day+'.gif">';
-        
+        let cook= day;
+        document.cookie = 'cook=day';    
     }
-   // console.log(DayCompte);
+    var x = document.cookie;
+   if(x==day){
+ alert('la case'+day+' est déja ouverte')
+   }else{
+      
+   }
 }
     
 }
