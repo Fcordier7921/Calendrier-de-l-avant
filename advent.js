@@ -50,7 +50,7 @@ function myFunction(day) {
 
         console.log(newToday);
 
-        let koocPush;
+        
         if ((day - 1) >= theDay[2]) {
             document.getElementById('day').innerHTML = 'Hep Hep Hep, on ne triche pas !';
         } else {
@@ -62,27 +62,29 @@ function myFunction(day) {
 
 }
 
-function creerCookie(nom, valeur, jours) {
-    if (jours) {
-        var date = new Date();
-        date.setTime(date.getTime() + (jours * 24 * 60 * 60 * 1000));
-        var expires = ''; expires = '' + date.toGMTString();
-    } else var expires = '';
+// function creerCookie(nom, valeur, jours) {
+//     if (jours) {
+//         var date = new Date();
+//         date.setTime(date.getTime() + (jours * 24 * 60 * 60 * 1000));
+//         var expires = ''; expires = '' + date.toGMTString();
+//     } else var expires = '';
 
-    document.cookie = nom + '=' + valeur + expires + '; path = /';
-}
-function recupererCookie(nom)
-{
-var nomRC = nom + '=';
-var ca = document.cookie.split(';');
+//     document.cookie = nom + '=' + valeur + expires + '; path = /';
+// }
 
-for(var i=0;i < ca.length; i++)
-{
-var c = ca[i];
-while (c.charAt(0)==' ') c = c.substring(1,c.length);
 
-if (c.indexOf(nomRC) == 0)
-return c.substring(nomRC.length, c.length);
-}
-return 'inconnu';
-}
+// function recupererCookie(nom)
+// {
+// var nomRC = nom + '=';
+// var ca = document.cookie.split(';');
+
+// for(var i=0;i < ca.length; i++)
+// {
+// var c = ca[i];
+// while (c.charAt(0)==' ') c = c.substring(1,c.length);
+
+// if (c.indexOf(nomRC) == 0)
+// return c.substring(nomRC.length, c.length);
+// }
+// return 'inconnu';
+// }
